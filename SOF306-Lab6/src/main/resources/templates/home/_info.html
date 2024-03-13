@@ -1,0 +1,41 @@
+<section class="banner" style="padding: 200px 0" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="info">
+	<div class="container text-center">
+		<div class="text">
+			<div th:unless="${#request.remoteUser}">
+				<span class="fadeInUp">
+					<h2 class="green">
+						<b>Vui lòng đăng nhập!</b>
+					</h2>
+				</span>
+				<br />
+				<a href="/auth/login/form">Đăng nhập ngay</a>
+			</div>
+			<h3 class="fadeInUp mt-5" th:text="${message}"></h3>
+			<hr />
+			<th:block th:if="${#request.remoteUser}">
+				<h2 class="fadeInUp">Authentication Information</h2>
+				<ul class="list-group">
+					<li class="list-group-item">
+						Username:
+						<b>[[${#request.remoteUser}]]</b>
+					</li>
+					<li class="list-group-item">
+						Is Admin?
+						<b>[[${#request.isUserInRole('ADMIN')}]]</b>
+					</li>
+				</ul>
+				<ul th:object="${#request.userPrincipal}" class="list-group mt-2">
+					<li class="list-group-item">
+						Username:
+						<b>[[*{name}]]</b>
+					</li>
+					<li class="list-group-item">
+						Roles:
+						<b>[[*{authorities}]]</b>
+					</li>
+				</ul>
+			</th:block>
+		</div>
+	</div>
+</section>

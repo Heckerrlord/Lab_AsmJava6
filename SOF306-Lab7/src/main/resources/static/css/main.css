@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("../css/plugins/animate.css");
+@import url("../css/plugins/bootstrap.min.css");
+@import url("../css/plugins/owl.carousel.min.css");
+@import url("../css/plugins/owl.theme.default.min.css");
+@import url("../css/plugins/datatables.min.css");
+body{font-family:'Roboto',sans-serif}
+a:link{text-decoration: none}
+.btn-brand{background:#08b072;box-shadow:0 10px 25px 0 rgba(0,0,0,0.1);border-radius:35px;padding:10px 35px;color:#fff;font-weight:500;transition:all .3s ease-in-out}
+.btn-brand:hover{color:#fff;background-color:#08b072;border-color:#08b072}
+.btn-brand.focus,.btn-brand:focus{color:#fff;background-color:#08b072;border-color:#08b072;box-shadow:none}
+
+.header{padding:150px 0;padding-bottom:70px;background:url(../img/bg/header.png) center center no-repeat;background-size:cover;background-attachment:fixed}
+.header h2{font-size:30px;font-weight:800;margin:0;text-transform:uppercase;color:#fff;font-family:'Be Vietnam Pro',sans-serif}
+
+.header-classic{background-image:linear-gradient(to right,#cae485,orange);font-weight:bold;transition:all .3s ease-in-out}
+.navbar-classic.navbar-light .navbar-nav .nav-link{font-size:15px;font-weight:300;color:#fff;padding:12px 16px}
+.navbar-classic .navbar-nav .nav-item .nav-link{font-size:15px;font-weight:400;color:#fff;padding:12px 20px;line-height:20px;transition:ALL .4S ease-in-out}
+.navbar-classic .navbar-nav .nav-item .nav-link:hover{color:#b9ff00}
+.navbar-classic .navbar-nav .nav-item .nav-link:hover.dropdown-toggle::after{color:#4dd4bf}
+.navbar-classic.navbar{padding:18px 0}
+.navbar-classic .dropdown-toggle::after{margin-top:1px;display:inline-block;width:0;height:0;margin-left:6px;vertical-align:0px;content:"\f107";border-top:none;border-right:none;border-bottom:none;border-left:none;color:#e2e2e2;font-family:'Font Awesome\ 5 Free';font-weight:900;margin-right:15px;font-size:13px}
+.navbar-classic .navbar-collapse.show .dropdown .dropdown-menu .dropdown-item{border-bottom:1px solid #f1f1f6;border-radius:0}
+a.navbar-brand{display:inline-block;margin-right:initial;line-height:inherit;white-space:nowrap;color:#6e6e78;font-size:24px;padding:0}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:16rem;padding:12px;margin:18px 0;font-size:1rem;color:#808294;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid #fff;border-radius:2px;-webkit-box-shadow:0 3px 11px 0 rgba(0,0,0,0.09);-moz-box-shadow:0 3px 11px 0 rgba(0,0,0,0.09);box-shadow:0 3px 11px 0 rgba(0,0,0,0.09)}
+.dropdown-item{display:block;width:100%;padding:15px;clear:both;font-weight:400;color:#6e6e78;text-align:inherit;white-space:nowrap;background-color:transparent;border:0;font-size:15px;line-height:15px;transition:all .3s ease-in-out}
+.dropdown-item:focus,.dropdown-item:hover{color:#4dd4bf;text-decoration:none;background-color:#ffff;border-radius:4px}
+.dropdown-item:focus .dropdown-toggle::after,.dropdown-item:hover.dropdown-toggle::after{color:#4dd4bf}
+@media(min-width:992px) {
+	.dropdown .dropdown-menu{display:block;visibility:hidden;opacity:0;-webkit-transform:translateY(20px);-ms-transform:translateY(20px);transform:translateY(20px);-webkit-transition:all .3s ease-in;-o-transition:all .3s ease-in;transition:all .3s ease-in}
+	.dropdown:hover>.dropdown-menu{visibility:visible;opacity:1;-webkit-transform:scaleY(1);-ms-transform:scaleY(1);transform:scaleY(1);opacity:1;visibility:visible}
+	.dropdown-submenu:hover .dropdown-menu{visibility:visible;opacity:1;-webkit-transform:scaleY(1);-ms-transform:scaleY(1);transform:scaleY(1);opacity:1;visibility:visible}
+}
+.dropdown-submenu{position:relative}
+.dropdown-submenu a::after{transform:rotate(-90deg);position:absolute;right:17px;top:25px}
+.dropdown-submenu .dropdown-menu{top:0;left:100%;margin-left:13px;margin-right:.1rem}
+.caret-up{width:0;height:0;border-left:4px solid rgba(0,0,0,0);border-right:4px solid rgba(0,0,0,0);border-bottom:4px solid;display:inline-block;margin-left:2px;vertical-align:middle}
+.mega-dropdown{position:unset}
+.mega-dropdown-menu{width:100%;position:absolute;top:63px;margin:15px 0}
+.mega-dropdown-menu ul{list-style:none}
+.nav-dropitem-arrow{position:relative;font-size:12px;opacity:0;padding-right:10px}
+.nav-dropitem-arrow i{position:absolute}
+.dropdown-item:focus,.dropdown-item:hover{color:#4dd4bf;text-decoration:none;background-color:#ffff;border-radius:4px}
+.dropdown-item:hover .nav-dropitem-arrow{color:#4dd4bf;opacity:1;margin-right:5px}
+.navbar-classic .navbar-toggler,.navbar-boxed .navbar-toggler{padding:17px 15px;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid #fff;border-radius:.25rem;position:relative}
+.navbar-classic .navbar-collapse.show .dropdown .dropdown-menu{background:#fff;box-shadow:none;margin:7px 0}
+.navbar-classic .navbar-collapse.show .navbar-nav .nav-item .nav-link{border-bottom:1px solid #ffa364}
+.navbar-classic .navbar-collapse.show .dropdown .dropdown-menu .dropdown-submenu.dropdown-item{border-bottom:1px solid #f1f1f6}
+.navbar-boxed .navbar-collapse.show .dropdown .dropdown-menu{background:#fff;box-shadow:none;margin:7px 0}
+.navbar-boxed .navbar-collapse.show .navbar-nav .nav-item .nav-link{border-bottom:1px solid #f1f1f6}
+.navbar-boxed .navbar-collapse.show .dropdown .dropdown-menu .dropdown-submenu.dropdown-item{border-bottom:1px solid #f1f1f6}
+.navbar-transparent .navbar-collapse.show .dropdown .dropdown-menu{background:#fff;box-shadow:none;margin:7px 0}
+.navbar-transparent .navbar-collapse.show .navbar-nav .nav-item .nav-link{border-bottom:1px solid #4dd4bf}
+.navbar-transparent .navbar-collapse.show .dropdown .dropdown-menu .dropdown-submenu.dropdown-item{border-bottom:1px solid #f1f1f6}
+.icon-bar{width:21px;height:3px;background-color:#4dd4bf;display:block;-webkit-transition:all .2s;transition:all .2s;margin-top:4px}
+.navbar-toggler:focus{outline:0}
+.navbar-toggler .top-bar{transform:rotate(45deg);transform-origin:10% 190%;background-color:#4dd4bf}
+.navbar-toggler .middle-bar{opacity:0}
+.navbar-toggler .bottom-bar{transform:rotate(-45deg);transform-origin:10% -80%;background-color:#4dd4bf}
+.navbar-toggler.collapsed .top-bar{transform:rotate(0);background-color:#4dd4bf}
+.navbar-toggler.collapsed .middle-bar{opacity:1}
+.navbar-toggler.collapsed .bottom-bar{transform:rotate(0);background-color:#4dd4bf}
+.slider{background:url(../img/bg/slider.jpg) center center no-repeat;background-size:cover;padding:40px 0;}
+.slider .text span{font-size:28px;font-weight:400;color:#fff;text-transform:uppercase;margin:20px 0;display:inline-block}
+.slider .text span .green{color:#03e07f}
+.slider .text h2{font-size:48px;color:#fff;font-weight:700;font-family:'Be Vietnam Pro',sans-serif;margin:0;margin:10px 0}
+.slider .text h3{font-size:36px;color:#fff;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;margin:0;margin:10px 0}
+.slider .text p{font-size:22px;font-weight:400;color:#fff;margin:0;margin-bottom:35px}
+.slider .text .btn-green{color:#fff;text-decoration:none;background:#2cca85;display:inline-block;padding:12px 35px;border-radius:100px;font-size:15px;text-transform:uppercase;font-weight:400;transition:all .3s ease-in-out;box-shadow:1px 1px 15px 0 rgba(0,0,0,0.1);margin-bottom:50px}
+.features{padding:120px 0}
+.features .box{background:#fff;padding:50px 40px;border-radius:5px;box-shadow:1px 1px 30px 0 rgba(0,0,0,0.1)}
+.features .box h2{font-size:20px;font-weight:600;color:#333448;margin:0;margin-top:30px;margin-bottom:15px}
+.features .box p{font-size:16px;font-weight:400;color:#8c8e91;line-height:28px;margin:0}
+.about{padding-bottom:120px;background:url(../img/bg/about.png) center center no-repeat;background-size:cover}
+.about .text{padding-left:40px}
+.about .text .fe{font-size:16px;font-weight:400;color:#c0c0c9;text-transform:uppercase;display:inline-block;margin-bottom:3px}
+.about .text h2{font-size:35px;color:#333448;font-weight:700;margin:0;font-family:'Be Vietnam Pro',sans-serif;margin-bottom:10px}
+.about .text p{font-size:16px;font-weight:400;color:#8c8e91;margin:0;line-height:28px;margin-bottom:25px}
+.about .text span.dark{font-size:18px;font-weight:400;color:#393f47}
+.about .text .btn-line{background:#855ff3;border:2px solid #855ff3;text-decoration:none;color:#fff;display:inline-block;padding:9px 30px;border-radius:100px;font-size:15px;text-transform:uppercase;font-weight:400;transition:all .3s ease-in-out}
+.about .text .btn-line:hover{background:#fff;color:#855ff3}
+.counter{padding-bottom:120px}
+.counter .item .circle{position:relative;width:170px;height:170px;box-shadow:1px 1px 30px 0 rgba(0,0,0,0.1);border-radius:50%}
+.counter .item .circle .text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.counter .item .circle .text h3{font-size:35px;font-weight:600;margin:0;margin-bottom:5px}
+.counter .item .circle .text .yellow{color:#ffcc42}
+.counter .item .circle .text .blue{color:#1dcdfb}
+.counter .item .circle .text .green{color:#0de49d}
+.counter .item .circle .text .red{color:#ff539e}
+.counter .item .circle .text h4{color:#71757c;font-size:17px;margin:0;font-weight:400}
+.digital{padding:120px 0;background:linear-gradient(to right,rgba(165,133,253,1) 0%,rgba(95,44,237,1) 100%);background-size:cover}
+.digital .text{padding-left:40px}
+.digital .text .fe{font-size:16px;font-weight:400;color:#fff;text-transform:uppercase;display:inline-block;margin-bottom:3px}
+.digital .text h2{font-size:35px;color:#fff;font-weight:700;margin:0;font-family:'Be Vietnam Pro',sans-serif;margin-bottom:10px}
+.digital .text p{font-size:16px;font-weight:400;color:#fff;margin:0;line-height:28px;margin-bottom:25px}
+.digital .text span.dark{font-size:18px;font-weight:400;color:#393f47}
+.digital .text .btn-line{background:#2cca85;border:2px solid #2cca85;text-decoration:none;color:#fff;display:inline-block;padding:9px 30px;border-radius:100px;font-size:15px;text-transform:uppercase;font-weight:400;transition:all .3s ease-in-out}
+.digital .text .btn-line:hover{background:transparent;color:#fff;border:2px solid #fff}
+.services{padding-top:120px;padding-bottom:90px}
+.services .heading{margin-bottom:50px}
+.services .heading span{font-size:16px;font-weight:400;color:#c0c0c9;text-transform:uppercase;display:inline-block;margin-bottom:3px}
+.services .heading h2{font-size:35px;color:#333448;font-weight:700;margin:0;font-family:'Be Vietnam Pro',sans-serif;margin-bottom:10px}
+.services .box{padding:50px 30px;box-shadow:1px 1px 20px 0 rgba(0,0,0,0.07);border-radius:5px;margin-bottom:30px;background:#fff}
+.services .box h3{font-size:20px;font-weight:600;color:#333448;margin:0;margin-bottom:10px;margin-top:25px;font-family:'Be Vietnam Pro',sans-serif}
+.services .box p{font-size:16px;font-weight:400;color:#8c8e91;margin:0;line-height:28px}
+
+.lab{padding:70px 0;background:#fef8fe;background-size:cover}
+.lab .heading{margin-bottom:50px}
+.lab .heading span{font-size:16px;font-weight:400;color:#c0c0c9;text-transform:uppercase;display:inline-block;margin-bottom:3px}
+.lab .heading h2{font-size:35px;color:#333448;font-weight:700;margin:0;font-family:'Be Vietnam Pro',sans-serif;margin-bottom:10px}
+.lab .form-control1{padding:25px;font-size:15px;margin-bottom:10px;background:#fff;border:1px solid #e6e6e6;border-radius:5px}
+.lab button.btn1{padding:10px 15px;border-radius:5px;font-size:15px}
+
+.footer{padding:50px 0;background:#e5ffea}
+.footer .who p{font-size:15px;font-weight:400;color:#8c8e91;margin:0;margin-top:20px;margin-bottom:5px;display:inline-block}
+.footer .who span{display:block;color:#282828;font-size:16px;margin:0;margin-top:20px}
+.footer .links h3{font-size:20px;font-weight:500;color:#131313;margin:0;margin-bottom:20px}
+.footer .links ul{padding:0}
+.footer .links ul li{list-style:none;margin:0;padding:0;margin-top:15px}
+.footer .links ul li a{font-size:16px;font-weight:400;color:#8c8e91;text-decoration:none;display:inline-block;transition:all .3s ease-in-out}
+.footer .links ul li a:hover{color:red}
+.footer .social h3{font-size:20px;font-weight:500;color:#131313;margin:0;margin-bottom:20px}
+.footer .social .icon{display:inline-block;position:relative;border:1px solid orange;width:45px;height:45px;border-radius:50%;margin-right:5px;transition:all .3s ease-in-out}
+.footer .social .icon:hover{background:orange}
+.footer .social .icon:hover a{color:#fff}
+.footer .social .icon a{display:inline-block;text-decoration:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:orange}
+.bottom{padding:20px 0;text-align:center;background-image:linear-gradient(to right,orange,#cae485)}
+.bottom h3{font-size:16px;font-weight:400;color:#fff;margin:0;padding:0}
+
+@media (max-width: 575.98px) {
+	.header-classic{background-image:linear-gradient(to right,#cae485,orange) !important}
+	.navbar .nav-link{margin:0;padding:20px 0!important}
+	.btn-brand{display:inline-block;margin-top:30px}
+	.navbar-classic.navbar-light .navbar-nav .nav-link{padding:25px 0}
+	.slider{padding:40px 0!important}
+	.features{padding-bottom:90px}
+	.features .box{margin-bottom:30px}
+	.digital .text{padding:0}
+	.about{text-align:center}
+	.about .text{padding:0}
+	.about .image{margin-top:50px}
+	.about .image img{margin:0 auto}
+	.counter{padding-bottom:90px}
+	.counter .item{margin-bottom:30px}
+	.digital{text-align:center}
+	.digital .image img{margin:0 auto;margin-bottom:50px}
+	.price .box-1,.price .box-2{margin-bottom:30px}
+	.lab .image{margin-bottom:50px}
+	.lab{text-align:center}
+	.blog{padding-bottom:80px}
+	.blog .box{margin-bottom:40px}
+	.blog .box img{width:100%}
+	.footer{text-align:center}
+	.footer .who{margin-bottom:30px}
+	.footer .links{margin-bottom:30px}
+}
+@media (max-width: 767.98px) {
+	.header-classic{background-image:linear-gradient(to right,#cae485,orange) !important}
+	.btn-brand{display:inline-block;margin-top:30px}
+	.navbar .nav-link{margin:0;padding:20px 0!important}
+	.btn-brand{display:inline-block;margin-top:30px}
+	.navbar-classic.navbar-light .navbar-nav .nav-link{padding:25px 0}
+	.slider{padding:40px 0!important}
+	.features{padding-bottom:90px}
+	.features .box{margin-bottom:30px}
+	.digital .text{padding:0}
+	.about{text-align:center}
+	.about .text{padding:0}
+	.about .image{margin-top:50px}
+	.about .image img{margin:0 auto}
+	.counter{padding-bottom:90px}
+	.counter .item{margin-bottom:30px}
+	.digital{text-align:center}
+	.digital .image img{margin:0 auto;margin-bottom:50px}
+	.price .box-1,.price .box-2{margin-bottom:30px}
+	.lab .image{margin-bottom:50px}
+	.lab{text-align:center}
+	.blog{padding-bottom:80px}
+	.blog .box{margin-bottom:40px}
+	.blog .box img{width:100%}
+	.footer{text-align:center}
+	.footer .who{margin-bottom:30px}
+	.footer .links{margin-bottom:30px}
+}
+@media (max-width: 991.98px) {
+	.header-classic{background-image:linear-gradient(to right,#cae485,orange) !important}
+	.btn-brand{display:inline-block;margin-top:30px}
+	.navbar .nav-link{margin:0;padding:20px 0!important}
+	.btn-brand{display:inline-block;margin-top:30px}
+	.navbar-classic.navbar-light .navbar-nav .nav-link{padding:25px 0}
+	.slider{padding:40px 0!important}
+	.about{text-align:center}
+	.about .text{padding:0}
+	.about .image{margin-top:50px}
+	.about .image img{margin:0 auto}
+	.counter{padding-bottom:90px}
+	.counter .item{margin-bottom:30px}
+	.digital{text-align:center}
+	.digital .image img{margin:0 auto;margin-bottom:50px}
+	.price .box-1,.price .box-2{margin-bottom:30px}
+	.lab .image{margin-bottom:50px}
+	.lab{text-align:center}
+	.blog{padding-bottom:80px}
+	.blog .box{margin-bottom:40px}
+	.blog .box img{width:100%}
+	.footer{text-align:center}
+	.footer .who{margin-bottom:30px}
+	.footer .links{margin-bottom:30px}
+}
+@media (max-width: 1199.98px) {
+	.testimonials .images{width:100%}
+}
+
+.boxes{padding:120px 0}
+.boxes .box{box-shadow:0 10px 25px 0 rgba(0,0,0,0.1);background:#fff;padding:40px;border-radius:5px}
+.boxes .box h2{font-size:20px;font-weight:600;margin:0;color:#333447;margin-top:25px;margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif}
+.boxes .box p{font-size:16px;font-weight:400;color:#8c8e91;margin:0;line-height:28px}
+.trial{background:#4dd4bf;padding:120px 0;color:#fff}
+.trial span{font-size:16px;font-weight:400;margin:0;display:inline-block;margin-bottom:5px}
+.trial h2{font-size:30px;font-weight:700;font-family:'Be Vietnam Pro',sans-serif;margin:0}
+.trial .btn-white{background:#ffff;box-shadow:0 10px 25px 0 rgba(0,0,0,0.1);border-radius:35px;padding:12px 35px;color:#50545f;font-weight:500;font-size:15px;display:inline-block;transition:all .3s ease-in-out;text-decoration:none;margin-top:35px}
+.team{padding:120px 0}
+.team .box{box-shadow:0 10px 25px 0 rgba(0,0,0,0.1)}
+.team .box .image{position:relative}
+.team .box .image img{width:100%}
+.team .box .image .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:#4dd4c0f1;transition:all .4s ease-in-out;opacity:0}
+.team .box:hover .overlay{opacity:1}
+.team .box .image .overlay .social{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.team .box .image .overlay .social a{text-decoration:none;color:#fff;border:1px solid #fff;border-radius:50%;display:inline-block;width:45px;height:45px;position:relative;transition:all .3s ease-in-out;margin:0 3px}
+.team .box .image .overlay .social a:hover{color:#4dd4bf;background:#fff}
+.team .box .image .overlay .social a i{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.team .box .info{padding:30px 0}
+.team .box .info h2{font-size:20px;font-weight:600;font-family:'Be Vietnam Pro',sans-serif;color:#333447;margin:0}
+.team .box .info span{font-size:15px;font-weight:400;color:#777b88;display:inline-block;margin-top:5px}
+.form-check-inline .form-check-input{margin-top: -1px !important}

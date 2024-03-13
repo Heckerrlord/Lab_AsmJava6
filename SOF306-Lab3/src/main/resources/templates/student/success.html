@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/layout.html :: dynamic(~{::body})}">
+
+<head>
+<base href="/" />
+<meta charset="UTF-8">
+<title>Homepage</title>
+</head>
+
+<body>
+	<section class="lab mt-5">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-md-9 m-auto d-block fadeInUp">
+					<h1 class="mb-3">Result</h1>
+					<ul class="list-group" th:object="${sv}">
+						<li class="list-group-item">
+							Email Address: <b th:text="*{email}"></b>
+						</li>
+						<li class="list-group-item">
+							Full Name: <b th:text="*{fullname}"></b>
+						</li>
+						<li class="list-group-item">
+							Average Marks: <b th:text="*{marks}"></b>
+						</li>
+						<li class="list-group-item">
+							Gender: <b th:text="${gender} ? 'Male' : 'Female'"> </b>
+						</li>
+						<li class="list-group-item">
+							Country: <b th:text="*{country}"> </b>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

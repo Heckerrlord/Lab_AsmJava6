@@ -1,0 +1,13 @@
+{
+	"name": "Nguyễn Hoàng Duy",
+	"gender": true,
+	"marks": 8.5,
+	"contact": {
+		"email": "duyplusdz@gmail.com",
+		"phone": "0123456789"
+	},
+	"subjects": [
+		"SOF302",
+		"SOF306"
+	]
+}

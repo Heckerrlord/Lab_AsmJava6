@@ -1,0 +1,70 @@
+<section class="header">
+    <div class="container text-center fadeInUp">
+        <h2>RESTful Consumer Firebase - AngularJS</h2>
+    </div>
+</section>
+<section class="lab">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12 fadeInUp">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control my-3" ng-model="form.email" placeholder="Email">
+                        <input type="text" class="form-control my-3" ng-model="form.fullname" placeholder="Name">
+                        <input type="number" class="form-control my-3" ng-model="form.marks" placeholder="Mark">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" ng-model="form.gender" ng-value="true">
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" ng-model="form.gender" ng-value="false">
+                            <label class="form-check-label">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select class="custom-select" ng-model="form.country">
+                            <option selected>Choose...</option>
+                            <option value="VN">Viet Nam</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" ng-click="create()">Create</button>
+                    <button class="btn btn-secondary" ng-click="update()">Update</button>
+                    <button class="btn btn-danger" ng-click="delete(key)">Delete</button>
+                    <button class="btn btn-info" ng-click="reset()">Reset</button>
+                </form>
+            </div>
+            <div class="col-md-12 my-3 fadeInUp">
+                <table class="table table-collapse table-bordered">
+                    <thead>
+                        <tr class="table-primary">
+                            <th scope="col">Email</th>
+                            <th scope="col">Fullname</th>
+                            <th scope="col">Marks</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Conuntry</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="(key, stu) in items">
+                            <th>{{stu.email}}</th>
+                            <td>{{stu.fullname}}</td>
+                            <td>{{stu.marks}}</td>
+                            <td>{{stu.gender ? 'Male':'Female'}}</td>
+                            <td>{{stu.country}}</td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-success" ng-click="edit(key)"><i
+                                        class="fas fa-pencil-alt"></i></button>
+                                <button class="btn btn-sm btn-danger" ng-click="delete(key)"><i
+                                        class="far fa-times-circle"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

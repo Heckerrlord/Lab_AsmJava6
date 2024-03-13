@@ -1,0 +1,28 @@
+<section class="header">
+    <div class="container text-center fadeInUp">
+        <h2>RESTful - File Manager</h2>
+    </div>
+</section>
+<section class="lab">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12 fadeInUp">
+                <div class="file-upload">
+                    <div class="image-upload-wrap">
+                        <input class="file-upload-input" type='file' accept="image/*" multiple
+                            onchange="angular.element(this).scope().upload(this.files)" />
+                        <div class="drag-text">
+                            <h3>Drag and drop a file or <br>select add Image</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <span ng-repeat="filename in filenames" title="Double click to delete">
+                        <img ng-src="{{url(filename)}}" ng-dblclick="delete(filename)" class="image-show m-1" >
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

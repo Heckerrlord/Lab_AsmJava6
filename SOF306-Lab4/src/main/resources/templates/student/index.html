@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/layout/layout.html :: dynamic(~{::body})}">
+
+<head>
+<base href="/" />
+<meta charset="UTF-8">
+<title>Homepage</title>
+</head>
+
+<body>
+	<section class="lab mt-5">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-md-12 m-auto d-block fadeInUp">
+					<h1 class="mb-3">RESTful Consumer - RestTemplate</h1>
+					<form method="post" th:object="${form}">
+						<div class="form-group">
+							<input class="form-control" th:field="*{email}" placeholder="Email Address?">
+						</div>
+						<div class="form-group">
+							<input class="form-control" th:field="*{fullname}" placeholder="Full Name?">
+						</div>
+						<div class="form-group">
+							<input class="form-control" th:field="*{marks}" placeholder="Average Marks?">
+						</div>
+						<div class="form-group">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" th:field="*{gender}" th:value="true">
+								<label class="form-check-label">Male</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" th:field="*{gender}" th:value="false">
+								<label class="form-check-label">Female</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<select class="custom-select" th:field="*{country}">
+								<option value="">Nationality?</option>
+								<option value="VN">Viet Nam</option>
+								<option value="US">United States</option>
+							</select>
+						</div>
+						<button class="btn btn1 btn-primary" th:formaction="@{/student/create}">Create</button>
+						<button class="btn btn1 btn-secondary" th:formaction="@{|/student/update/${key}|}">Update</button>
+						<button class="btn btn1 btn-danger" th:formaction="@{|/student/delete/${key}|}">Delete</button>
+						<button class="btn btn1 btn-info" th:formaction="@{/student/reset}">Reset</button>
+					</form>
+				</div>
+				<div class="col-md-12 my-5 fadeInUp">
+					<table class="table table-collapse table-bordered">
+						<thead>
+							<tr class="table-primary">
+								<th scope="col">Email</th>
+								<th scope="col">Fullname</th>
+								<th scope="col">Marks</th>
+								<th scope="col">Gender</th>
+								<th scope="col">Conuntry</th>
+								<th scope="col">#</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="entry:${items}" th:object="${entry.value}">
+								<td>[[*{email}]]</td>
+								<td>[[*{fullname}]]</td>
+								<td>[[*{marks}]]</td>
+								<td>[[*{gender ? 'Male':'Female'}]]</td>
+								<td>[[*{country}]]</td>
+								<td class="text-center">
+									<a class="btn btn-sm btn-success" th:href="@{|/student/edit/${entry.key}|}">
+										<i class="fas fa-pencil-alt"></i>
+									</a>
+									<a class="btn btn-sm btn-danger" th:href="@{|/student/delete/${entry.key}|}">
+										<i class="far fa-times-circle"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

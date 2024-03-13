@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-classic" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="navbar">
+	<a class="navbar-brand" href="/index">
+		<img th:src="@{/img/logo.png}" style="margin: -15px auto; width: 65%;">
+	</a>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+		data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="icon-bar top-bar mt-0"></span>
+		<span class="icon-bar middle-bar"></span>
+		<span class="icon-bar bottom-bar"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbar-classic">
+		<ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Security</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="/authenticated">Authenticated</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="/users">Users</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="/admins">Admins</a>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/authorize">Authorize</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about" th:text="#{nav.about}">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/contact" th:text="#{nav.contact}">Contact</a>
+			</li>
+			<li class="nav-item" th:unless="${#request.remoteUser}">
+				<a class="nav-link" href="/auth/login/form" th:text="#{nav.login}">Login</a>
+			</li>
+			<li class="nav-item" th:if="${#request.remoteUser}">
+				<a class="nav-link" href="/auth/logoff" th:text="#{nav.logout}">Logout</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" th:text="#{nav.lang}">Language</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="dropdown-item" href="/index?lang=vi" th:text="#{nav.vi}">Vietnamese</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="/index?lang=en" th:text="#{nav.en}">English</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>

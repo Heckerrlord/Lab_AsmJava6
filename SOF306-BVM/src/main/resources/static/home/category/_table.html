@@ -1,0 +1,45 @@
+<div class="card" ng-if="items">
+	<div class="card-header">CATEGORY LIST</div>
+	<div class="card-body pt-3 pb-1">
+		<table class="table table-collapse table-bordered">
+			<thead class="bg-primary text-white">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Note</th>
+					<th>Description</th>
+					<th>#</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in pager.items">
+					<th class="align-middle">{{item.id}}</th>
+					<td class="align-middle">{{item.name}}</td>
+					<td class="align-middle">{{item.note}}</td>
+					<td class="align-middle">{{item.description}}</td>
+					<td class="align-middle">
+						<div class="btn-group btn-group-xs">
+							<button ng-click="edit(item)" class="btn btn-sm btn-warning fas fa-edit"></button>
+							<!-- <button ng-click="delete(item)" class="btn btn-sm btn-danger fas fa-trash"></button> -->
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="card-footer text-center">
+			<button ng-click="pager.first()" class="btn btn-danger">
+				<i class="fas fa-step-backward"></i>
+			</button>
+			<button ng-click="pager.prev()" class="btn btn-primary">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+			<button class="btn btn-success">{{pager.page + 1}} of {{pager.count}}</button>
+			<button ng-click="pager.next()" class="btn btn-primary">
+				<i class="fas fa-chevron-right"></i>
+			</button>
+			<button ng-click="pager.last()" class="btn btn-danger">
+				<i class="fas fa-step-forward"></i>
+			</button>
+		</div>
+	</div>
+</div>

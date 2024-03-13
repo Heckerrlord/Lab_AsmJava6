@@ -1,0 +1,66 @@
+[
+	{
+		"name": "Nguyễn Hoàng Duy",
+		"gender": true,
+		"marks": 8.5,
+		"contact": {
+			"email": "duyplusdz@gmail.com",
+			"phone": "0123456789"
+		},
+		"subjects": [
+			"SOF302",
+			"SOF306"
+		]
+	},
+	{
+		"name": "Trần Thị Thu Hương",
+		"gender": false,
+		"marks": 5.5,
+		"contact": {
+			"email": "huongttt@gmail.com",
+			"phone": "0945676542"
+		},
+		"subjects": [
+			"WEB205",
+			"SOF306"
+		]
+	},
+	{
+		"name": "Phạm Đức Cường",
+		"gender": true,
+		"marks": 9.5,
+		"contact": {
+			"email": "cuongpd@gmail.com",
+			"phone": "0956876876"
+		},
+		"subjects": [
+			"SOF306"
+		]
+	},
+	{
+		"name": "Lê Thị Mỹ Hồng",
+		"gender": false,
+		"marks": 6.5,
+		"contact": {
+			"email": "hongltm@gmail.com",
+			"phone": "0976523456"
+		},
+		"subjects": [
+			"SOF302",
+			"COM108"
+		]
+	},
+	{
+		"name": "Đoàn Thị Kim Ty",
+		"gender": false,
+		"marks": 8.0,
+		"contact": {
+			"email": "hongdtk@gmail.com",
+			"phone": "0984765432"
+		},
+		"subjects": [
+			"SOF306",
+			"COM108"
+		]
+	}
+]

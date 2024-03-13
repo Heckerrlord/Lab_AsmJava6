@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(view)">
+
+<head>
+<base href="/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/main.css">
+<title>Homepage</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div class="header-classic fixed-top fadeInDown">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<nav th:insert="~{/home/_menu.html :: navbar}"></nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="header">
+		<div class="container text-center fadeInUp">
+			<h2>Authorizing</h2>
+		</div>
+	</section>
+	<section class="lab">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-md-9 m-auto d-block fadeInUp">
+					<table ng-if="db" class="table table-collapse table-bordered">
+						<thead class="table-dark">
+							<tr>
+								<th>#</th>
+								<th ng-repeat="role in db.roles">{{role.name}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="acc in db.accounts">
+								<th>{{acc.username}}</th>
+								<th ng-repeat="role in db.roles">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox"
+											ng-checked="index_of(acc.username, role.id) >= 0"
+											ng-click="update(acc.username, role.id)">
+									</div>
+								</th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="who">
+						<img th:src="@{/img/logo.png}" style="margin: -15px auto; width: 65%;">
+						<span>Thực học - Thực nghiệp</span>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="links">
+						<h3 th:text="#{foot.info}">Info</h3>
+						<ul>
+							<li>
+								<span>PS18293</span>
+							</li>
+							<li>
+								<span>Nguyễn Hoàng Duy</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="links">
+						<h3 th:text="#{foot.service}">Services</h3>
+						<ul>
+							<li>
+								<a href="javascript:;">Web Design</a>
+							</li>
+							<li>
+								<a href="javascript:;">Development</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="social">
+						<h3 th:text="#{foot.social}">Social Media</h3>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</div>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-dribbble"></i>
+							</a>
+						</div>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="bottom">
+		<h3>Copyright &copy; 2022 JAVA6. All right reserved.</h3>
+	</div>
+
+	<script src="js/plugins/jquery-3.4.1.min.js"></script>
+	<script src="js/plugins/popper.min.js"></script>
+	<script src="js/plugins/bootstrap.min.js"></script>
+	<script src="js/plugins/jquery.waypoints.min.js"></script>
+	<script src="js/plugins/jquery.counterup.min.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/datatables.min.js"></script>
+	<script src="js/plugins/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/ctrl.js"></script>
+</body>
+
+</html>

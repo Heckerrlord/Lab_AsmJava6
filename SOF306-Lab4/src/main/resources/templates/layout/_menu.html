@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-classic" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="navbar">
+	<a class="navbar-brand" href="/">
+		<img th:src="@{/img/logo.png}" style="margin: -15px auto; width: 65%;">
+	</a>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+		data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="icon-bar top-bar mt-0"></span>
+		<span class="icon-bar middle-bar"></span>
+		<span class="icon-bar bottom-bar"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbar-classic">
+		<ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+			<li class="nav-item">
+				<a class="nav-link" href="/student" th:text="#{nav.student}">Student</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about" th:text="#{nav.about}">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/contact" th:text="#{nav.contact}">Contact</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="menu" data-toggle="dropdown"
+					th:text="#{nav.lang}">Language</a>
+				<ul class="dropdown-menu" aria-labelledby="menu">
+					<li>
+						<a class="dropdown-item" href="/?lang=vi" th:text="#{nav.vi}">Vietnamese</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="/?lang=en" th:text="#{nav.en}">English</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>

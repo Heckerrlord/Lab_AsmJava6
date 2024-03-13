@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/main.css">
+<title>Homepage</title>
+</head>
+
+<body>
+	<!-- ========== Start Navbar ========== -->
+	<!-- header start -->
+	<div class="header-classic fixed-top fadeInDown">
+		<!-- navigation start -->
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<nav class="navbar navbar-expand-lg navbar-classic">
+						<a class="navbar-brand" href="index">
+							<img src="img/logo.png" style="margin: -15px auto; width: 65%;">
+						</a>
+						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+							data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="icon-bar top-bar mt-0"></span>
+							<span class="icon-bar middle-bar"></span>
+							<span class="icon-bar bottom-bar"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbar-classic">
+							<ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="menu" data-toggle="dropdown">Exercise</a>
+									<ul class="dropdown-menu" aria-labelledby="menu">
+										<li>
+											<a class="dropdown-item" href="/bai1">Bài 1 - THYMELEAF PROJECT</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai2">Bài 2 - EXPRESSION CONCEPTS</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai31">Bài 3.1 - SCOPES</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai32">Bài 3.2 - PARAMETERS</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai4">Bài 4 - OPERATORS</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai5">Bài 5 - FLOW CONTROL ATTRIBUTES</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="/bai6">Bài 6 - UTILITY OBJECTS</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:;">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:;">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:;">Contact</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="javascript:;">Feedback</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- navigation close -->
+	</div>
+	<!-- header close -->
+	<section class="lab mt-5">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-md-9 m-auto d-block fadeInUp">
+					<h1 class="mb-3">Welcome to Thymeleaf</h1>
+					<ul class="list-group">
+						<li class="list-group-item" th:text="${message}"></li>
+						<li class="list-group-item" th:utext="${message}"></li>
+					</ul>
+					<hr />
+					<ul class="list-group">
+						<li class="list-group-item">[[${message}]]</li>
+						<li class="list-group-item">[(${message})]</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ========== End Contact ========== -->
+
+	<!-- ========== Start Footer ========== -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- Who -->
+				<div class="col-md-3">
+					<div class="who">
+						<img src="img/logo.png" style="margin: -15px auto; width: 65%;">
+						<span>Thực hoc - Thực nghiệp</span>
+					</div>
+				</div>
+				<!-- Links -->
+				<div class="col-md-3">
+					<div class="links">
+						<h3>About Us</h3>
+						<ul>
+							<li>
+								<span>PS18293</span>
+							</li>
+							<li>
+								<span>Nguyễn Hoàng Duy</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Links -->
+				<div class="col-md-3">
+					<div class="links">
+						<h3>Services</h3>
+						<ul>
+							<li>
+								<a href="javascript:;">Web Design</a>
+							</li>
+							<li>
+								<a href="javascript:;">Development</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Social -->
+				<div class="col-md-3">
+					<div class="social">
+						<h3>Social Media</h3>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</div>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-dribbble"></i>
+							</a>
+						</div>
+						<div class="icon">
+							<a href="javascript:;">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="bottom">
+		<h3>Copyright &copy; 2022 JAVA6. All right reserved.</h3>
+	</div>
+	<!-- ========== End Footer ========== -->
+
+	<script src="js/plugins/jquery-3.4.1.min.js"></script>
+	<script src="js/plugins/popper.min.js"></script>
+	<script src="js/plugins/bootstrap.min.js"></script>
+	<script src="js/plugins/jquery.waypoints.min.js"></script>
+	<script src="js/plugins/jquery.counterup.min.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

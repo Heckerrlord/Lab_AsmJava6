@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java 6</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body ng-app="admin-app">
+	<div class="container">
+		<header class="pt-2">
+			<div ng-include="'/home/_menu.html'"></div>
+		</header>
+		<main class="my-2">
+			<span class="ng-view" /></span>
+		</main>
+		<footer>
+			<div class="text-white bg-danger pt-4 pb-3">
+				<h6 class="text-center">FPT Polytechnic &copy; 2022. All rights reserved.</h6>
+			</div>
+		</footer>
+	</div>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/mdb.min.js"></script>
+	<script src="/assets/js/sweetalert2.min.js"></script>
+	<script src="/assets/js/angular.min.js"></script>
+	<script src="/assets/js/angular-route.min.js"></script>
+	<script src="/assets/ctrl/admin-ctrl.js"></script>
+	<script src="/assets/ctrl/account-ctrl.js"></script>
+	<script src="/assets/ctrl/product-ctrl.js"></script>
+	<script src="/assets/ctrl/category-ctrl.js"></script>
+	<script src="/assets/ctrl/authority-ctrl.js"></script>
+</body>
+</html>
